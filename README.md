@@ -1,13 +1,15 @@
-# hexo-generator-category
+# hexo-generator-multilingual-category
 
-[![Build Status](https://travis-ci.org/hexojs/hexo-generator-category.svg?branch=master)](https://travis-ci.org/hexojs/hexo-generator-category)  [![NPM version](https://badge.fury.io/js/hexo-generator-category.svg)](http://badge.fury.io/js/hexo-generator-category) [![Coverage Status](https://img.shields.io/coveralls/hexojs/hexo-generator-category.svg)](https://coveralls.io/r/hexojs/hexo-generator-category?branch=master)
+[![Build Status](https://travis-ci.org/ahaasler/hexo-generator-multilingual-category.svg?branch=master)](https://travis-ci.org/ahaasler/hexo-generator-multilingual-category)
+[![NPM version](https://badge.fury.io/js/hexo-generator-multilingual-category.svg)](http://badge.fury.io/js/hexo-generator-multilingual-category)
+[![Coverage Status](https://img.shields.io/coveralls/ahaasler/hexo-generator-multilingual-category.svg)](https://coveralls.io/r/ahaasler/hexo-generator-multilingual-category?branch=master)
 
-Category generator for [Hexo].
+Multilingual category generator for [Hexo](http://hexo.io/).
 
 ## Installation
 
 ``` bash
-$ npm install hexo-generator-category --save
+$ npm install hexo-generator-multilingual-category --save
 ```
 
 ## Options
@@ -17,10 +19,8 @@ category_generator:
   per_page: 10
 ```
 
-- **per_page**: Posts displayed per page. (0 = disable pagination)
+- **per_page**: Posts displayed per page. (0 = disable pagination).
 
 ## License
 
 MIT
-
-[Hexo]: http://hexo.io/
