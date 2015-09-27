@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "hexo-pagination": "0.0.2",
+    "lodash": "^3.10.1",
     "object-assign": "^4.0.1"
   }
 }
