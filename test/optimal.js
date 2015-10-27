@@ -100,7 +100,6 @@ describe('optimal', function() {
     hexo.config.category_generator.per_page = 1;
 
     var result = generator(locals);
-    console.log(locals);
 
     result.length.should.eql(4);
 
@@ -123,10 +122,10 @@ describe('optimal', function() {
     result[0].data.alternates.length.should.eql(2);
     result[0].data.alternates[0].title.should.eql('number');
     result[0].data.alternates[0].lang.should.eql('en');
-    result[0].data.alternates[0].path.should.eql('en/categories/number');
+    result[0].data.alternates[0].path.should.eql('en/categories/number/');
     result[0].data.alternates[1].title.should.eql('numero');
     result[0].data.alternates[1].lang.should.eql('es');
-    result[0].data.alternates[1].path.should.eql('es/categories/numero');
+    result[0].data.alternates[1].path.should.eql('es/categories/numero/');
 
     result[1].path.should.eql('en/categories/number/page/2/');
     result[1].data.base.should.eql('en/categories/number/');
@@ -143,10 +142,10 @@ describe('optimal', function() {
     result[1].data.alternates.length.should.eql(2);
     result[1].data.alternates[0].title.should.eql('number');
     result[1].data.alternates[0].lang.should.eql('en');
-    result[1].data.alternates[0].path.should.eql('en/categories/number');
+    result[1].data.alternates[0].path.should.eql('en/categories/number/');
     result[1].data.alternates[1].title.should.eql('numero');
     result[1].data.alternates[1].lang.should.eql('es');
-    result[1].data.alternates[1].path.should.eql('es/categories/numero');
+    result[1].data.alternates[1].path.should.eql('es/categories/numero/');
 
     result[2].path.should.eql('es/categories/numero/');
     result[2].data.base.should.eql('es/categories/numero/');
@@ -163,10 +162,10 @@ describe('optimal', function() {
     result[2].data.alternates.length.should.eql(2);
     result[2].data.alternates[0].title.should.eql('number');
     result[2].data.alternates[0].lang.should.eql('en');
-    result[2].data.alternates[0].path.should.eql('en/categories/number');
+    result[2].data.alternates[0].path.should.eql('en/categories/number/');
     result[2].data.alternates[1].title.should.eql('numero');
     result[2].data.alternates[1].lang.should.eql('es');
-    result[2].data.alternates[1].path.should.eql('es/categories/numero');
+    result[2].data.alternates[1].path.should.eql('es/categories/numero/');
 
     result[3].path.should.eql('es/categories/numero/page/2/');
     result[3].data.base.should.eql('es/categories/numero/');
@@ -183,10 +182,10 @@ describe('optimal', function() {
     result[3].data.alternates.length.should.eql(2);
     result[3].data.alternates[0].title.should.eql('number');
     result[3].data.alternates[0].lang.should.eql('en');
-    result[3].data.alternates[0].path.should.eql('en/categories/number');
+    result[3].data.alternates[0].path.should.eql('en/categories/number/');
     result[3].data.alternates[1].title.should.eql('numero');
     result[3].data.alternates[1].lang.should.eql('es');
-    result[3].data.alternates[1].path.should.eql('es/categories/numero');
+    result[3].data.alternates[1].path.should.eql('es/categories/numero/');
 
     // Restore config
     hexo.config.category_generator.per_page = 10;
@@ -219,10 +218,10 @@ describe('optimal', function() {
     result[0].data.alternates.length.should.eql(2);
     result[0].data.alternates[0].title.should.eql('number');
     result[0].data.alternates[0].lang.should.eql('en');
-    result[0].data.alternates[0].path.should.eql('en/categories/number');
+    result[0].data.alternates[0].path.should.eql('en/categories/number/');
     result[0].data.alternates[1].title.should.eql('numero');
     result[0].data.alternates[1].lang.should.eql('es');
-    result[0].data.alternates[1].path.should.eql('es/categories/numero');
+    result[0].data.alternates[1].path.should.eql('es/categories/numero/');
 
     result[1].path.should.eql('es/categories/numero/');
     result[1].data.base.should.eql('es/categories/numero/');
@@ -240,10 +239,10 @@ describe('optimal', function() {
     result[1].data.alternates.length.should.eql(2);
     result[1].data.alternates[0].title.should.eql('number');
     result[1].data.alternates[0].lang.should.eql('en');
-    result[1].data.alternates[0].path.should.eql('en/categories/number');
+    result[1].data.alternates[0].path.should.eql('en/categories/number/');
     result[1].data.alternates[1].title.should.eql('numero');
     result[1].data.alternates[1].lang.should.eql('es');
-    result[1].data.alternates[1].path.should.eql('es/categories/numero');
+    result[1].data.alternates[1].path.should.eql('es/categories/numero/');
 
     // Restore config
     hexo.config.category_generator.per_page = 10;
