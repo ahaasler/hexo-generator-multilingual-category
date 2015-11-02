@@ -119,6 +119,7 @@ describe('optimal', function() {
     result[0].data.next.should.eql(2);
     result[0].data.next_link.should.eql('en/categories/number/page/2/');
     result[0].data.category.should.eql('number');
+    result[0].data.lang.should.eql('en');
     result[0].data.alternates.length.should.eql(2);
     result[0].data.alternates[0].title.should.eql('number');
     result[0].data.alternates[0].lang.should.eql('en');
@@ -139,6 +140,7 @@ describe('optimal', function() {
     result[1].data.next.should.eql(0);
     result[1].data.next_link.should.eql('');
     result[1].data.category.should.eql('number');
+    result[1].data.lang.should.eql('en');
     result[1].data.alternates.length.should.eql(2);
     result[1].data.alternates[0].title.should.eql('number');
     result[1].data.alternates[0].lang.should.eql('en');
@@ -159,6 +161,7 @@ describe('optimal', function() {
     result[2].data.next.should.eql(2);
     result[2].data.next_link.should.eql('es/categories/numero/page/2/');
     result[2].data.category.should.eql('numero');
+    result[2].data.lang.should.eql('es');
     result[2].data.alternates.length.should.eql(2);
     result[2].data.alternates[0].title.should.eql('number');
     result[2].data.alternates[0].lang.should.eql('en');
@@ -179,6 +182,7 @@ describe('optimal', function() {
     result[3].data.next.should.eql(0);
     result[3].data.next_link.should.eql('');
     result[3].data.category.should.eql('numero');
+    result[3].data.lang.should.eql('es');
     result[3].data.alternates.length.should.eql(2);
     result[3].data.alternates[0].title.should.eql('number');
     result[3].data.alternates[0].lang.should.eql('en');
