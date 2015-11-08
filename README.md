@@ -16,12 +16,23 @@ $ npm install hexo-generator-multilingual-category --save
 
 ## Options
 
+You can configure this plugin in `_config.yml`.
+
 ``` yaml
 category_generator:
   per_page: 10
 ```
 
-- **per_page**: Posts displayed per page. (0 = disable pagination).
+- **per\_page**: Posts displayed per page (0 = disable pagination).
+
+### Localizable configuration
+
+These are the values that this generator uses and can be [localized](https://github.com/ahaasler/hexo-multilingual#_c-configuration-locales "Configuring locales"):
+
+- category_generator
+  - per_page
+- category_dir
+- pagination_dir
 
 ## License
 
