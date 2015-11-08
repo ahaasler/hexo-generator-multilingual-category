@@ -126,7 +126,7 @@ describe('optimal', function() {
     result[0].data.alternates[0].path.should.eql('en/categories/number/');
     result[0].data.alternates[1].title.should.eql('numero');
     result[0].data.alternates[1].lang.should.eql('es');
-    result[0].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[0].data.alternates[1].path.should.eql('es/categorias/numero/');
 
     result[1].path.should.eql('en/categories/number/page/2/');
     result[1].data.base.should.eql('en/categories/number/');
@@ -147,19 +147,19 @@ describe('optimal', function() {
     result[1].data.alternates[0].path.should.eql('en/categories/number/');
     result[1].data.alternates[1].title.should.eql('numero');
     result[1].data.alternates[1].lang.should.eql('es');
-    result[1].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[1].data.alternates[1].path.should.eql('es/categorias/numero/');
 
-    result[2].path.should.eql('es/categories/numero/');
-    result[2].data.base.should.eql('es/categories/numero/');
+    result[2].path.should.eql('es/categorias/numero/');
+    result[2].data.base.should.eql('es/categorias/numero/');
     result[2].data.total.should.eql(2);
     result[2].data.current.should.eql(1);
-    result[2].data.current_url.should.eql('es/categories/numero/');
+    result[2].data.current_url.should.eql('es/categorias/numero/');
     result[2].data.posts.length.should.eql(1);
     result[2].data.posts.eq(0)._id.should.eql(posts[3]._id);
     result[2].data.prev.should.eql(0);
     result[2].data.prev_link.should.eql('');
     result[2].data.next.should.eql(2);
-    result[2].data.next_link.should.eql('es/categories/numero/pagina/2/');
+    result[2].data.next_link.should.eql('es/categorias/numero/pagina/2/');
     result[2].data.category.should.eql('numero');
     result[2].data.lang.should.eql('es');
     result[2].data.alternates.length.should.eql(2);
@@ -168,17 +168,17 @@ describe('optimal', function() {
     result[2].data.alternates[0].path.should.eql('en/categories/number/');
     result[2].data.alternates[1].title.should.eql('numero');
     result[2].data.alternates[1].lang.should.eql('es');
-    result[2].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[2].data.alternates[1].path.should.eql('es/categorias/numero/');
 
-    result[3].path.should.eql('es/categories/numero/pagina/2/');
-    result[3].data.base.should.eql('es/categories/numero/');
+    result[3].path.should.eql('es/categorias/numero/pagina/2/');
+    result[3].data.base.should.eql('es/categorias/numero/');
     result[3].data.total.should.eql(2);
     result[3].data.current.should.eql(2);
-    result[3].data.current_url.should.eql('es/categories/numero/pagina/2/');
+    result[3].data.current_url.should.eql('es/categorias/numero/pagina/2/');
     result[3].data.posts.length.should.eql(1);
     result[3].data.posts.eq(0)._id.should.eql(posts[1]._id);
     result[3].data.prev.should.eql(1);
-    result[3].data.prev_link.should.eql('es/categories/numero/');
+    result[3].data.prev_link.should.eql('es/categorias/numero/');
     result[3].data.next.should.eql(0);
     result[3].data.next_link.should.eql('');
     result[3].data.category.should.eql('numero');
@@ -189,7 +189,7 @@ describe('optimal', function() {
     result[3].data.alternates[0].path.should.eql('en/categories/number/');
     result[3].data.alternates[1].title.should.eql('numero');
     result[3].data.alternates[1].lang.should.eql('es');
-    result[3].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[3].data.alternates[1].path.should.eql('es/categorias/numero/');
 
     // Restore config
     hexo.config.category_generator.per_page = 10;
@@ -225,13 +225,13 @@ describe('optimal', function() {
     result[0].data.alternates[0].path.should.eql('en/categories/number/');
     result[0].data.alternates[1].title.should.eql('numero');
     result[0].data.alternates[1].lang.should.eql('es');
-    result[0].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[0].data.alternates[1].path.should.eql('es/categorias/numero/');
 
-    result[1].path.should.eql('es/categories/numero/');
-    result[1].data.base.should.eql('es/categories/numero/');
+    result[1].path.should.eql('es/categorias/numero/');
+    result[1].data.base.should.eql('es/categorias/numero/');
     result[1].data.total.should.eql(1);
     result[1].data.current.should.eql(1);
-    result[1].data.current_url.should.eql('es/categories/numero/');
+    result[1].data.current_url.should.eql('es/categorias/numero/');
     result[1].data.posts.length.should.eql(2);
     result[1].data.posts.eq(0)._id.should.eql(posts[3]._id);
     result[1].data.posts.eq(1)._id.should.eql(posts[1]._id);
@@ -246,7 +246,7 @@ describe('optimal', function() {
     result[1].data.alternates[0].path.should.eql('en/categories/number/');
     result[1].data.alternates[1].title.should.eql('numero');
     result[1].data.alternates[1].lang.should.eql('es');
-    result[1].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[1].data.alternates[1].path.should.eql('es/categorias/numero/');
 
     // Restore config
     hexo.config.category_generator.per_page = 10;

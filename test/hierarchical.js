@@ -36,7 +36,7 @@ describe('hierarchical', function() {
       process(newFile({
         path: 'config_en.yml',
         type: 'create',
-        content: new Buffer('category_dir: categoriespagination_dir: page')
+        content: new Buffer('category_dir: categories\npagination_dir: page')
       }));
       process(newFile({
         path: 'config_es.yml',
@@ -126,7 +126,7 @@ describe('hierarchical', function() {
     result[0].data.alternates[0].path.should.eql('en/categories/number/');
     result[0].data.alternates[1].title.should.eql('numero');
     result[0].data.alternates[1].lang.should.eql('es');
-    result[0].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[0].data.alternates[1].path.should.eql('es/categorias/numero/');
 
     result[1].path.should.eql('en/categories/number/page/2/');
     result[1].data.base.should.eql('en/categories/number/');
@@ -147,7 +147,7 @@ describe('hierarchical', function() {
     result[1].data.alternates[0].path.should.eql('en/categories/number/');
     result[1].data.alternates[1].title.should.eql('numero');
     result[1].data.alternates[1].lang.should.eql('es');
-    result[1].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[1].data.alternates[1].path.should.eql('es/categorias/numero/');
 
     result[2].path.should.eql('en/categories/number/uneven/');
     result[2].data.base.should.eql('en/categories/number/uneven/');
@@ -168,19 +168,19 @@ describe('hierarchical', function() {
     result[2].data.alternates[0].path.should.eql('en/categories/number/uneven/');
     result[2].data.alternates[1].title.should.eql('impar');
     result[2].data.alternates[1].lang.should.eql('es');
-    result[2].data.alternates[1].path.should.eql('es/categories/numero/impar/');
+    result[2].data.alternates[1].path.should.eql('es/categorias/numero/impar/');
 
-    result[3].path.should.eql('es/categories/numero/');
-    result[3].data.base.should.eql('es/categories/numero/');
+    result[3].path.should.eql('es/categorias/numero/');
+    result[3].data.base.should.eql('es/categorias/numero/');
     result[3].data.total.should.eql(2);
     result[3].data.current.should.eql(1);
-    result[3].data.current_url.should.eql('es/categories/numero/');
+    result[3].data.current_url.should.eql('es/categorias/numero/');
     result[3].data.posts.length.should.eql(1);
     result[3].data.posts.eq(0)._id.should.eql(posts[3]._id);
     result[3].data.prev.should.eql(0);
     result[3].data.prev_link.should.eql('');
     result[3].data.next.should.eql(2);
-    result[3].data.next_link.should.eql('es/categories/numero/pagina/2/');
+    result[3].data.next_link.should.eql('es/categorias/numero/pagina/2/');
     result[3].data.category.should.eql('numero');
     result[3].data.lang.should.eql('es');
     result[3].data.alternates.length.should.eql(2);
@@ -189,17 +189,17 @@ describe('hierarchical', function() {
     result[3].data.alternates[0].path.should.eql('en/categories/number/');
     result[3].data.alternates[1].title.should.eql('numero');
     result[3].data.alternates[1].lang.should.eql('es');
-    result[3].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[3].data.alternates[1].path.should.eql('es/categorias/numero/');
 
-    result[4].path.should.eql('es/categories/numero/pagina/2/');
-    result[4].data.base.should.eql('es/categories/numero/');
+    result[4].path.should.eql('es/categorias/numero/pagina/2/');
+    result[4].data.base.should.eql('es/categorias/numero/');
     result[4].data.total.should.eql(2);
     result[4].data.current.should.eql(2);
-    result[4].data.current_url.should.eql('es/categories/numero/pagina/2/');
+    result[4].data.current_url.should.eql('es/categorias/numero/pagina/2/');
     result[4].data.posts.length.should.eql(1);
     result[4].data.posts.eq(0)._id.should.eql(posts[1]._id);
     result[4].data.prev.should.eql(1);
-    result[4].data.prev_link.should.eql('es/categories/numero/');
+    result[4].data.prev_link.should.eql('es/categorias/numero/');
     result[4].data.next.should.eql(0);
     result[4].data.next_link.should.eql('');
     result[4].data.category.should.eql('numero');
@@ -210,13 +210,13 @@ describe('hierarchical', function() {
     result[4].data.alternates[0].path.should.eql('en/categories/number/');
     result[4].data.alternates[1].title.should.eql('numero');
     result[4].data.alternates[1].lang.should.eql('es');
-    result[4].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[4].data.alternates[1].path.should.eql('es/categorias/numero/');
 
-    result[5].path.should.eql('es/categories/numero/impar/');
-    result[5].data.base.should.eql('es/categories/numero/impar/');
+    result[5].path.should.eql('es/categorias/numero/impar/');
+    result[5].data.base.should.eql('es/categorias/numero/impar/');
     result[5].data.total.should.eql(1);
     result[5].data.current.should.eql(1);
-    result[5].data.current_url.should.eql('es/categories/numero/impar/');
+    result[5].data.current_url.should.eql('es/categorias/numero/impar/');
     result[5].data.posts.length.should.eql(1);
     result[5].data.posts.eq(0)._id.should.eql(posts[1]._id);
     result[5].data.prev.should.eql(0);
@@ -231,7 +231,7 @@ describe('hierarchical', function() {
     result[5].data.alternates[0].path.should.eql('en/categories/number/uneven/');
     result[5].data.alternates[1].title.should.eql('impar');
     result[5].data.alternates[1].lang.should.eql('es');
-    result[5].data.alternates[1].path.should.eql('es/categories/numero/impar/');
+    result[5].data.alternates[1].path.should.eql('es/categorias/numero/impar/');
 
     result[6].path.should.eql('en/categories/number/even/');
     result[6].data.base.should.eql('en/categories/number/even/');
@@ -252,13 +252,13 @@ describe('hierarchical', function() {
     result[6].data.alternates[0].path.should.eql('en/categories/number/even/');
     result[6].data.alternates[1].title.should.eql('par');
     result[6].data.alternates[1].lang.should.eql('es');
-    result[6].data.alternates[1].path.should.eql('es/categories/numero/par/');
+    result[6].data.alternates[1].path.should.eql('es/categorias/numero/par/');
 
-    result[7].path.should.eql('es/categories/numero/par/');
-    result[7].data.base.should.eql('es/categories/numero/par/');
+    result[7].path.should.eql('es/categorias/numero/par/');
+    result[7].data.base.should.eql('es/categorias/numero/par/');
     result[7].data.total.should.eql(1);
     result[7].data.current.should.eql(1);
-    result[7].data.current_url.should.eql('es/categories/numero/par/');
+    result[7].data.current_url.should.eql('es/categorias/numero/par/');
     result[7].data.posts.length.should.eql(1);
     result[7].data.posts.eq(0)._id.should.eql(posts[3]._id);
     result[7].data.prev.should.eql(0);
@@ -273,7 +273,7 @@ describe('hierarchical', function() {
     result[7].data.alternates[0].path.should.eql('en/categories/number/even/');
     result[7].data.alternates[1].title.should.eql('par');
     result[7].data.alternates[1].lang.should.eql('es');
-    result[7].data.alternates[1].path.should.eql('es/categories/numero/par/');
+    result[7].data.alternates[1].path.should.eql('es/categorias/numero/par/');
 
     // Restore config
     hexo.config.category_generator.per_page = 10;
@@ -310,7 +310,7 @@ describe('hierarchical', function() {
     result[0].data.alternates[0].path.should.eql('en/categories/number/');
     result[0].data.alternates[1].title.should.eql('numero');
     result[0].data.alternates[1].lang.should.eql('es');
-    result[0].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[0].data.alternates[1].path.should.eql('es/categorias/numero/');
 
     result[1].path.should.eql('en/categories/number/uneven/');
     result[1].data.base.should.eql('en/categories/number/uneven/');
@@ -331,13 +331,13 @@ describe('hierarchical', function() {
     result[1].data.alternates[0].path.should.eql('en/categories/number/uneven/');
     result[1].data.alternates[1].title.should.eql('impar');
     result[1].data.alternates[1].lang.should.eql('es');
-    result[1].data.alternates[1].path.should.eql('es/categories/numero/impar/');
+    result[1].data.alternates[1].path.should.eql('es/categorias/numero/impar/');
 
-    result[2].path.should.eql('es/categories/numero/');
-    result[2].data.base.should.eql('es/categories/numero/');
+    result[2].path.should.eql('es/categorias/numero/');
+    result[2].data.base.should.eql('es/categorias/numero/');
     result[2].data.total.should.eql(1);
     result[2].data.current.should.eql(1);
-    result[2].data.current_url.should.eql('es/categories/numero/');
+    result[2].data.current_url.should.eql('es/categorias/numero/');
     result[2].data.posts.length.should.eql(2);
     result[2].data.posts.eq(0)._id.should.eql(posts[3]._id);
     result[2].data.posts.eq(1)._id.should.eql(posts[1]._id);
@@ -353,13 +353,13 @@ describe('hierarchical', function() {
     result[2].data.alternates[0].path.should.eql('en/categories/number/');
     result[2].data.alternates[1].title.should.eql('numero');
     result[2].data.alternates[1].lang.should.eql('es');
-    result[2].data.alternates[1].path.should.eql('es/categories/numero/');
+    result[2].data.alternates[1].path.should.eql('es/categorias/numero/');
 
-    result[3].path.should.eql('es/categories/numero/impar/');
-    result[3].data.base.should.eql('es/categories/numero/impar/');
+    result[3].path.should.eql('es/categorias/numero/impar/');
+    result[3].data.base.should.eql('es/categorias/numero/impar/');
     result[3].data.total.should.eql(1);
     result[3].data.current.should.eql(1);
-    result[3].data.current_url.should.eql('es/categories/numero/impar/');
+    result[3].data.current_url.should.eql('es/categorias/numero/impar/');
     result[3].data.posts.length.should.eql(1);
     result[3].data.posts.eq(0)._id.should.eql(posts[1]._id);
     result[3].data.prev.should.eql(0);
@@ -374,7 +374,7 @@ describe('hierarchical', function() {
     result[3].data.alternates[0].path.should.eql('en/categories/number/uneven/');
     result[3].data.alternates[1].title.should.eql('impar');
     result[3].data.alternates[1].lang.should.eql('es');
-    result[3].data.alternates[1].path.should.eql('es/categories/numero/impar/');
+    result[3].data.alternates[1].path.should.eql('es/categorias/numero/impar/');
 
     result[4].path.should.eql('en/categories/number/even/');
     result[4].data.base.should.eql('en/categories/number/even/');
@@ -395,13 +395,13 @@ describe('hierarchical', function() {
     result[4].data.alternates[0].path.should.eql('en/categories/number/even/');
     result[4].data.alternates[1].title.should.eql('par');
     result[4].data.alternates[1].lang.should.eql('es');
-    result[4].data.alternates[1].path.should.eql('es/categories/numero/par/');
+    result[4].data.alternates[1].path.should.eql('es/categorias/numero/par/');
 
-    result[5].path.should.eql('es/categories/numero/par/');
-    result[5].data.base.should.eql('es/categories/numero/par/');
+    result[5].path.should.eql('es/categorias/numero/par/');
+    result[5].data.base.should.eql('es/categorias/numero/par/');
     result[5].data.total.should.eql(1);
     result[5].data.current.should.eql(1);
-    result[5].data.current_url.should.eql('es/categories/numero/par/');
+    result[5].data.current_url.should.eql('es/categorias/numero/par/');
     result[5].data.posts.length.should.eql(1);
     result[5].data.posts.eq(0)._id.should.eql(posts[3]._id);
     result[5].data.prev.should.eql(0);
@@ -416,7 +416,7 @@ describe('hierarchical', function() {
     result[5].data.alternates[0].path.should.eql('en/categories/number/even/');
     result[5].data.alternates[1].title.should.eql('par');
     result[5].data.alternates[1].lang.should.eql('es');
-    result[5].data.alternates[1].path.should.eql('es/categories/numero/par/');
+    result[5].data.alternates[1].path.should.eql('es/categorias/numero/par/');
 
     // Restore config
     hexo.config.category_generator.per_page = 10;
