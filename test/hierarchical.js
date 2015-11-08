@@ -36,12 +36,12 @@ describe('hierarchical', function() {
       process(newFile({
         path: 'config_en.yml',
         type: 'create',
-        content: new Buffer('category_dir: categories')
+        content: new Buffer('category_dir: categoriespagination_dir: page')
       }));
       process(newFile({
         path: 'config_es.yml',
         type: 'create',
-        content: new Buffer('category_dir: categories')
+        content: new Buffer('category_dir: categorias\npagination_dir: pagina')
       }));
     });
   });
@@ -180,7 +180,7 @@ describe('hierarchical', function() {
     result[3].data.prev.should.eql(0);
     result[3].data.prev_link.should.eql('');
     result[3].data.next.should.eql(2);
-    result[3].data.next_link.should.eql('es/categories/numero/page/2/');
+    result[3].data.next_link.should.eql('es/categories/numero/pagina/2/');
     result[3].data.category.should.eql('numero');
     result[3].data.lang.should.eql('es');
     result[3].data.alternates.length.should.eql(2);
@@ -191,11 +191,11 @@ describe('hierarchical', function() {
     result[3].data.alternates[1].lang.should.eql('es');
     result[3].data.alternates[1].path.should.eql('es/categories/numero/');
 
-    result[4].path.should.eql('es/categories/numero/page/2/');
+    result[4].path.should.eql('es/categories/numero/pagina/2/');
     result[4].data.base.should.eql('es/categories/numero/');
     result[4].data.total.should.eql(2);
     result[4].data.current.should.eql(2);
-    result[4].data.current_url.should.eql('es/categories/numero/page/2/');
+    result[4].data.current_url.should.eql('es/categories/numero/pagina/2/');
     result[4].data.posts.length.should.eql(1);
     result[4].data.posts.eq(0)._id.should.eql(posts[1]._id);
     result[4].data.prev.should.eql(1);

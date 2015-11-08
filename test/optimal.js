@@ -36,12 +36,12 @@ describe('optimal', function() {
       process(newFile({
         path: 'config_en.yml',
         type: 'create',
-        content: new Buffer('category_dir: categories')
+        content: new Buffer('category_dir: categories\npagination_dir: page')
       }));
       process(newFile({
         path: 'config_es.yml',
         type: 'create',
-        content: new Buffer('category_dir: categories')
+        content: new Buffer('category_dir: categorias\npagination_dir: pagina')
       }));
     });
   });
@@ -159,7 +159,7 @@ describe('optimal', function() {
     result[2].data.prev.should.eql(0);
     result[2].data.prev_link.should.eql('');
     result[2].data.next.should.eql(2);
-    result[2].data.next_link.should.eql('es/categories/numero/page/2/');
+    result[2].data.next_link.should.eql('es/categories/numero/pagina/2/');
     result[2].data.category.should.eql('numero');
     result[2].data.lang.should.eql('es');
     result[2].data.alternates.length.should.eql(2);
@@ -170,11 +170,11 @@ describe('optimal', function() {
     result[2].data.alternates[1].lang.should.eql('es');
     result[2].data.alternates[1].path.should.eql('es/categories/numero/');
 
-    result[3].path.should.eql('es/categories/numero/page/2/');
+    result[3].path.should.eql('es/categories/numero/pagina/2/');
     result[3].data.base.should.eql('es/categories/numero/');
     result[3].data.total.should.eql(2);
     result[3].data.current.should.eql(2);
-    result[3].data.current_url.should.eql('es/categories/numero/page/2/');
+    result[3].data.current_url.should.eql('es/categories/numero/pagina/2/');
     result[3].data.posts.length.should.eql(1);
     result[3].data.posts.eq(0)._id.should.eql(posts[1]._id);
     result[3].data.prev.should.eql(1);
