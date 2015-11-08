@@ -1,6 +1,6 @@
 {
   "name": "hexo-generator-multilingual-category",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Multilingual category generator for Hexo.",
   "main": "index",
   "scripts": {
