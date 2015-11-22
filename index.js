@@ -7,3 +7,4 @@ hexo.config.category_generator = assign({
 }, hexo.config.category_generator);
 
 hexo.extend.generator.register('category', require('./lib/generator'));
+hexo.extend.helper.register('list_categories', require('./lib/helper/list_categories'));
