@@ -56,7 +56,7 @@
     "rimraf": "^2.4.3"
   },
   "dependencies": {
-    "hexo-multilingual": "^0.3.0",
+    "hexo-multilingual": "^0.4.1",
     "hexo-pagination": "0.0.2",
     "lodash": "^3.10.1",
     "object-assign": "^4.0.1"
