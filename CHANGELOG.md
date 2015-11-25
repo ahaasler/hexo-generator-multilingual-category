@@ -1,6 +1,13 @@
 Changelog
 =========
 
+v0.3.0
+------
+
+***November 25, 2015***
+
+- Add list\_categories helper: [\#3](https://github.com/ahaasler/hexo-generator-multilingual-category/issues/3 "Add list\_categories helper").
+
 v0.2.0
 ------
 
