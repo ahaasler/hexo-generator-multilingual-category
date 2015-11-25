@@ -34,6 +34,12 @@ These are the values that this generator uses and can be [localized](https://git
 - category_dir
 - pagination_dir
 
+## Helpers
+
+This plugins overrides default Hexo helpers:
+
+- [list_categories](https://hexo.io/docs/helpers.html#list_categories "list_categories | Helpers | Hexo"): Inserts a list of all categories **for the current language**.
+
 ## License
 
 MIT
