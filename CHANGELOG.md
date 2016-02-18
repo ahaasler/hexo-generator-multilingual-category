@@ -1,12 +1,19 @@
 Changelog
 =========
 
+v0.3.1
+------
+
+***February 18, 2016***
+
+- Fix _list\_categories_ `showCurrent` option for category pages: [\#4](https://github.com/ahaasler/hexo-generator-multilingual-category/issues/4 "Current category is not tagged on category pages").
+
 v0.3.0
 ------
 
 ***November 25, 2015***
 
-- Add list\_categories helper: [\#3](https://github.com/ahaasler/hexo-generator-multilingual-category/issues/3 "Add list\_categories helper").
+- Add _list\_categories_ helper: [\#3](https://github.com/ahaasler/hexo-generator-multilingual-category/issues/3 "Add list\_categories helper").
 
 v0.2.0
 ------
